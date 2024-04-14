@@ -1,0 +1,102 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px 3px 0px 3px;
+}
+
+/* custom launcher style */
+#custom-launcher {
+  color: #00A1D5;
+}
+
+#workspaces button {
+	color:  #FF86C9;
+  padding: 0px;
+}
+
+#workspaces button.active {
+  border-bottom: 1px solid #00BE67;
+	color:  #00BE67;
+}
+
+#workspaces button.urgent {
+	background-color:  #F500BD;	
+  color:  #000000;
+}
+
+#workspaces button.persistent {
+	color:  #2B0E66;
+}
+
+
+/* CPU style */
+#cpu {
+  color: #fa9f8e;
+}
+
+/* memory style */
+#memory {
+  color: #b9fac2;
+}
+
+/* temperature style */
+#temperature {
+  color: #FF86C9;
+}
+
+/* window style */
+#window {
+  color: #64727d;
+}
+
+window#waybar {
+  background-color: #131822;
+  color: #ffffff;
+  border-width: 1px;
+  border-color: #3a4151;
+  border-style: solid;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+/* clock style */
+#clock {
+  color: #00BE67;
+}
+
+/* backlight style */
+#backlight {
+  color: #dddddd;
+}
+
+/* battery style */
+#battery {
+    color: #a6e3a1;
+    margin-right: 5px;
+}
+
+/* network style */
+#network {
+color: #EFA00F;
+}
+
+#bluetooth {
+    color: #7F2F6F;
+} 
+
+#pulseaudio {
+    color: #02CEFC;
+}
+
+#pulseaudio.microphone {
+    color: #ED006C;
+    margin-right: 10px;
+}
