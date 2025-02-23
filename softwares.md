@@ -20,7 +20,16 @@
 - bat
 - lf
 - sof-firmware
+
+# System
 - alsa-utils
+- upower
+
+# nvidia
+- nvidia 
+- nvidia-utils
+- egl-wayland
+
 
 # Screenshot
 - swappy 
