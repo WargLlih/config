@@ -20,6 +20,7 @@
 - bat
 - lf
 - sof-firmware
+- alsa-utils
 
 # Screenshot
 - swappy 
