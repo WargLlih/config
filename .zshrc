@@ -44,7 +44,9 @@ alias @nvim="cd ~/WargLlih/nvim/"
 
 # personal exports
 export PATH=$PATH:/home/roy/go/bin
+export PATH=$PATH:/home/roy/MyApps
 export CLICOLOR=1
+
 
 # personal functions
 function rdp(){

@@ -9,6 +9,7 @@
 - lazygit
 
 # Fonts
+- adobe-source-han-sans-kr-fonts
 - adobe-source-han-sans-cn-fonts
 - ttf-jetbrains-mono-nerd 
 - noto-fonts-emoji 
