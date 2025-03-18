@@ -31,6 +31,8 @@
 - nvidia-utils
 - egl-wayland
 
+# Screen Sharing
+- xdg-desktop-portal-hyprland
 
 # Screenshot
 - swappy 
