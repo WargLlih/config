@@ -1,2 +1,342 @@
+configuration {
+    modi: "drun,run,window,ssh";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "▓▒░  APPS  ░▒▓";
+    display-run: "▓▒░  EXECUTE  ░▒▓";
+    display-window: "▓▒░  WINDOWS  ░▒▓";
+    display-ssh: "▓▒░  CONNECT  ░▒▓";
+    drun-display-format: "{name}";
+    window-format: "{w} ▸ {c} ▸ {t}";
+    font: "JetBrains Mono Nerd Font 10";
+    case-sensitive: false;
+    cycle: true;
+    sidebar-mode: true;
+    hover-select: true;
+    eh: 1;
+    auto-select: false;
+    parse-hosts: true;
+    parse-known-hosts: true;
+}
 
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+* {
+    /* === COLOR PALETTE === */
+    bg-primary:       #0a0a0f;
+    bg-secondary:     #0f0f1a;
+    bg-accent:        #1a0a1a;
+    bg-transparent:   rgba(10, 10, 15, 0.5);
+    
+    /* Neon colors */
+    neon-cyan:        #00ffff;
+    neon-pink:        #ff0080;
+    neon-purple:      #8000ff;
+    neon-green:       #00ff80;
+    neon-orange:      #ff8000;
+    
+    /* UI elements */
+    border-color:     @neon-cyan;
+    selected-normal-foreground: #000000;
+    selected-normal-background: @neon-purple;
+    normal-foreground: #ffffff;
+    normal-background: rgba(0, 255, 255, 0.05);
+    active-foreground: @neon-green;
+    active-background: rgba(0, 255, 128, 0.15);
+    urgent-foreground: @neon-pink;
+    urgent-background: rgba(255, 0, 128, 0.15);
+    
+    /* Spacing and dimensions */
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    text-color: @normal-foreground;
+    background-color: transparent;
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 750px;
+    height: 480px;
+    x-offset: 0px;
+    y-offset: 0px;
+    
+    /* Window styling */
+    transparency: "real";
+    background-color: @bg-transparent;
+    border: 3px;
+    border-color: @border-color;
+    border-radius: 8px;
+    cursor: "default";
+}
+
+mainbox {
+    enabled: true;
+    spacing: 8px;
+    margin: 12px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    border-color: @border-color;
+    background-color: transparent;
+    text-color: @normal-foreground;
+    children: [ "inputbar", "mode-switcher", "listview" ];
+}
+
+/* === INPUT BAR === */
+inputbar {
+    enabled: true;
+    spacing: 8px;
+    margin: 0px 0px 8px 0px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: @border-color;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-color: @normal-foreground;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled: true;
+    padding: 10px 16px;
+    border-radius: 4px;
+    background-color: @neon-cyan;
+    text-color: @bg-primary;
+    font: "JetBrains Mono Nerd Font Bold 10";
+}
+
+entry {
+    enabled: true;
+    padding: 10px 12px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(0, 255, 255, 0.4);
+    background-color: rgba(0, 255, 255, 0.08);
+    text-color: @normal-foreground;
+    cursor: text;
+    placeholder: "Type to search...";
+    placeholder-color: rgba(255, 255, 255, 0.4);
+}
+
+/* === MODE SWITCHER === */
+mode-switcher {
+    enabled: true;
+    spacing: 4px;
+    margin: 0px 0px 8px 0px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    border-color: @border-color;
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+button {
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(0, 255, 255, 0.3);
+    background-color: rgba(0, 255, 255, 0.1);
+    text-color: @neon-cyan;
+    cursor: pointer;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    padding: 8px 12px;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: @neon-cyan;
+    background-color: @neon-purple;
+    text-color: @normal-foreground;
+    font: "JetBrains Mono Nerd Font Bold 10";
+}
+
+/* === LIST VIEW === */
+listview {
+    enabled: true;
+    columns: 2;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    
+    spacing: 4px;
+    margin: 0px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: @border-color;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-color: @normal-foreground;
+    cursor: "default";
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    border-radius: 2px;
+    background-color: rgba(0, 255, 255, 0.2);
+    handle-width: 6px;
+    handle-color: @neon-cyan;
+    padding: 0;
+}
+
+/* === ELEMENTS === */
+element {
+    enabled: true;
+    spacing: 8px;
+    margin: 2px;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(0, 255, 255, 0.2);
+    background-color: rgba(0, 255, 255, 0.05);
+    text-color: @normal-foreground;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: rgba(0, 255, 255, 0.05);
+    text-color: @normal-foreground;
+}
+
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+    border-color: @urgent-foreground;
+}
+
+element normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+    border-color: @active-foreground;
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border: 2px solid;
+    border-color: @neon-cyan;
+    font: "JetBrains Mono Nerd Font Bold 10";
+}
+
+element selected.urgent {
+    background-color: @urgent-foreground;
+    text-color: @bg-primary;
+    border-color: @normal-foreground;
+}
+
+element selected.active {
+    background-color: @active-foreground;
+    text-color: @bg-primary;
+    border-color: @normal-foreground;
+}
+
+element alternate.normal {
+    background-color: rgba(0, 255, 255, 0.08);
+    text-color: @normal-foreground;
+}
+
+element alternate.urgent {
+    background-color: rgba(255, 0, 128, 0.18);
+    text-color: @urgent-foreground;
+}
+
+element alternate.active {
+    background-color: rgba(0, 255, 128, 0.18);
+    text-color: @active-foreground;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: bold #00ffff;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/* === MESSAGES === */
+message {
+    enabled: true;
+    margin: 8px 0px;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: @border-color;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-color: @normal-foreground;
+}
+
+textbox {
+    enabled: true;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    border-color: @border-color;
+    background-color: transparent;
+    text-color: @normal-foreground;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    highlight: bold #00ffff;
+    placeholder-color: rgba(255, 255, 255, 0.4);
+    blink: true;
+    markup: true;
+}
+
+error-message {
+    enabled: true;
+    margin: 8px;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: @urgent-foreground;
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+/* === CASE SWITCHER === */
+case-indicator {
+    enabled: true;
+    padding: 4px;
+    text-color: @normal-foreground;
+    background-color: transparent;
+}
+
+/* === NUM FILTERED === */
+num-filtered-rows {
+    enabled: true;
+    expand: false;
+    background-color: transparent;
+    text-color: rgba(255, 255, 255, 0.6);
+}
+
+num-rows {
+    enabled: true;
+    expand: false;
+    background-color: transparent;
+    text-color: rgba(255, 255, 255, 0.6);
+}
+
+/* === TEXTBOX PROMPT COLON === */
+textbox-prompt-colon {
+    enabled: true;
+    expand: false;
+    str: " ▸ ";
+    background-color: transparent;
+    text-color: @neon-cyan;
+}
