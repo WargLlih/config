@@ -21,28 +21,28 @@ configuration {
 
 * {
     /* === COLOR PALETTE === */
-    bg-primary:       #0a0a0f;
-    bg-secondary:     #0f0f1a;
-    bg-accent:        #1a0a1a;
-    bg-transparent:   rgba(10, 10, 15, 0.5);
+    bg-primary:       #000000;
+    bg-secondary:     #0a0a0a;
+    bg-accent:        #1a1a1a;
+    bg-transparent:   rgba(0, 0, 0, 0.8);
     
-    /* Neon colors */
+    /* Neon colors - Enhanced for stronger contrast */
     neon-cyan:        #00ffff;
     neon-pink:        #ff0080;
-    neon-purple:      #8000ff;
-    neon-green:       #00ff80;
+    neon-purple:      #ff00ff;
+    neon-green:       #00ff00;
     neon-orange:      #ff8000;
     
-    /* UI elements */
+    /* UI elements - Enhanced contrast */
     border-color:     @neon-cyan;
     selected-normal-foreground: #000000;
     selected-normal-background: @neon-purple;
     normal-foreground: #ffffff;
-    normal-background: rgba(0, 255, 255, 0.05);
+    normal-background: rgba(0, 255, 255, 0.1);
     active-foreground: @neon-green;
-    active-background: rgba(0, 255, 128, 0.15);
+    active-background: rgba(0, 255, 0, 0.2);
     urgent-foreground: @neon-pink;
-    urgent-background: rgba(255, 0, 128, 0.15);
+    urgent-background: rgba(255, 0, 128, 0.2);
     
     /* Spacing and dimensions */
     margin: 0;
@@ -92,7 +92,7 @@ inputbar {
     border: 2px solid;
     border-radius: 6px;
     border-color: @border-color;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.95);
     text-color: @normal-foreground;
     children: [ "prompt", "entry" ];
 }
@@ -173,7 +173,7 @@ listview {
     border: 2px solid;
     border-radius: 6px;
     border-color: @border-color;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.9);
     text-color: @normal-foreground;
     cursor: "default";
 }
@@ -203,7 +203,7 @@ element {
 }
 
 element normal.normal {
-    background-color: rgba(0, 255, 255, 0.05);
+    background-color: rgba(0, 255, 255, 0.1);
     text-color: @normal-foreground;
 }
 
@@ -240,17 +240,17 @@ element selected.active {
 }
 
 element alternate.normal {
-    background-color: rgba(0, 255, 255, 0.08);
+    background-color: rgba(0, 255, 255, 0.15);
     text-color: @normal-foreground;
 }
 
 element alternate.urgent {
-    background-color: rgba(255, 0, 128, 0.18);
+    background-color: rgba(255, 0, 128, 0.25);
     text-color: @urgent-foreground;
 }
 
 element alternate.active {
-    background-color: rgba(0, 255, 128, 0.18);
+    background-color: rgba(0, 255, 0, 0.25);
     text-color: @active-foreground;
 }
 
