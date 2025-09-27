@@ -1,57 +1,79 @@
-# Terminal
+# Softwares list
+
+## Terminal
+
 - kitty
 - neovim
-- ripgrep 
-- zsh 
+- zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 - starship
 - lazygit
 
-# Fonts
+## nvim stuff
+
+- ripgrep
+
+### linters
+
+- luacheck
+- markdownlint-cli
+- eslint_d
+- yamllint
+- shellcheck
+- cppcheck
+
+## Fonts
+
 - adobe-source-han-sans-kr-fonts
 - adobe-source-han-sans-cn-fonts
-- ttf-jetbrains-mono-nerd 
-- noto-fonts-emoji 
+- ttf-jetbrains-mono-nerd
+- noto-fonts-emoji
 
-# Basic
+## Basic
+
 - git
-- unzip 
+- unzip
 - btop
 - bat
 - lf
 - sof-firmware
 
-# System
+## System
+
 - alsa-utils
 - upower
 
-# nvidia
-- nvidia 
+## nvidia
+
+- nvidia
 - nvidia-utils
 - egl-wayland
 
-# Screen Sharing
+## Screen Sharing
+
 - xdg-desktop-portal-hyprland
 
-# Screenshot
-- swappy 
-- grim 
-- slurp 
+## Screenshot
 
-# Wayland
+- swappy
+- grim
+- slurp
+
+## Wayland
+
 - wl-clipboard
 - polkit-gnome
-- waybar 
+- waybar
 - wofi
 - pamixer
 - mako
-- brightnessctl 
+- brightnessctl
 - hyprpaper
 
-# Cool Apps
-- filelight 
-- spotify
-- bluetuith 
-- swaylock-effects
+## Cool Apps
 
+- filelight
+- spotify
+- bluetuith
+- swaylock-effects
